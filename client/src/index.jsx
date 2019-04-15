@@ -21,7 +21,7 @@ class FeaturesSpecs extends React.Component {
   render () {
     return (
       <div className="main-container">
-        <h4 className="container-panel" onClick={()=> this.toggleList()}>Features and Specs</h4>
+        <h4 className="container-panel" onClick={()=> this.toggleList()}>Features and Specs<span className="floatRight">&#9662;</span></h4>
         {this.state.listOpen
           ? <Faq />
           : null
@@ -31,4 +31,5 @@ class FeaturesSpecs extends React.Component {
   }
 }
 
+window.Faqs = FeaturesSpecs;
 ReactDOM.render(<FeaturesSpecs/>, document.getElementById('FeaturesSpecs') || document.createElement('div'));

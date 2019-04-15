@@ -16,7 +16,7 @@ class Faq extends React.Component {
 
   componentDidMount () {
     let path = window.location.pathname.slice(9);
-    axios.get(path)
+    axios.get(`http://localhost:3005${path}`)
       .then((results) => {
         let topFiveFeatures = [];
         for (let i = 0; i < 5; i++) {
